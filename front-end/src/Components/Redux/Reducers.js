@@ -1254,6 +1254,7 @@ const setupSubmachineForDisplay = (state, action) => {
 
         // "displayResults problemSet 0" is the problem set name genrated but the '0' doesn't refer to the ith problem set
         // when this runs it's overriting previous correctly calculated results for a different problem set
+        // this problem set is for display purposes
         let result = makeProblemSet(temporaryState, action)
         temporaryState = result[0]
         let myDisplayResults = getCell(temporaryState, 'displayResults')
@@ -1410,7 +1411,7 @@ let Root2 = {
                     functionCode: setupForBackend,
 
                 },
-
+// --------------------------
 
             // after this is run there is no need to transfer the payload
             'elementarySchool storeResults': {
@@ -1430,7 +1431,7 @@ let Root2 = {
                     name: 'payload',
                     value: {'problem set table': []}
                 },
-
+// ----------------------------
             // for displaying results only
             'elementarySchool displayResults' : {
                 parent: 'root',
@@ -1496,6 +1497,7 @@ let Root2 = {
 // machine2 = setupProblem(machine2[0])
 // get the list of problems from action
 
+// converts the problems to the contextual state chart structure
 let action = {
     type: 'elementarySchool utilities createProblem',
     meta: {

@@ -1,3 +1,5 @@
+This project is a work in progress
+
 This project is a solo project, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 It runs locally.
